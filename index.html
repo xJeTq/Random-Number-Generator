@@ -7,32 +7,30 @@
     <link rel="stylesheet" type="text/css" href="styles.css" />
     <script>
         function randomNumber(t, b) {
+            var result;
 
             if (isNaN(t) || isNaN(b)) {
-
-                return "Invalid input... Please enter numerical values only."
-
+                return "Invalid input... Please enter numerical values only.";
             }
 
-            var result = Math.floor((Math.random() * (t - b) + b));
-            return result; 
-            
+            result = Math.floor((Math.random() * (t - b) + b));
+            return result;
         }
 
         function handleClick() {
             var topValue = parseFloat(document.getElementById("top").value);
             var bottomValue = parseFloat(document.getElementById("bottom").value);
-            
+
             var result = randomNumber(topValue, bottomValue);
 
             var outputElement = document.getElementById("output");
-            outputElement.textContent = "Number: " + result.toFixed(2);
+            outputElement.textContent = typeof result === "number" ? "Number: " + result.toFixed(2) : result;
         }
     </script>
 </head>
 <body>
     <div class="header">
-        <h>Random Number Generator</h>
+        <h1>Random Number Generator</h1>
     </div>
     <div class="panel-L"></div>
     <div class="center">
