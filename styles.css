@@ -1,0 +1,62 @@
+.header {
+
+    padding: 60px;
+    text-align: center;
+    font-size: 30px;
+    background-color: darkblue;
+    color: white;
+
+}
+
+.panel-L {
+
+    padding: 60px;
+    margin-top: 0.5%;
+    margin-right: 80%;
+    width: 200px;
+    height: 825px;
+    background-color: lightblue;
+
+}
+
+.center {
+
+    position: absolute;
+    padding: 60px;
+    top: 170px;
+    bottom: 140px;
+    left: 335px;
+    right: 335px;
+    background-color: white;
+    text-align: center;
+
+}
+
+.center .btn {
+
+    position: relative;
+    margin: 1%;
+
+}
+
+.panel-R {
+
+    position: absolute;
+    padding: 60px;
+    right: 8px;
+    width: 200px;
+    height: 825px;
+    top: 170px;
+    background-color: lightblue;
+
+}
+
+.footer {
+
+    position: absolute;
+    padding: 60px;
+    bottom: 0.75%;
+    width: 92.75%;
+    background-color: darkblue;
+
+}

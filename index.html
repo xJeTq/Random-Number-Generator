@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Number Generator</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <script>
+        function randomNumber(t, b) {
+
+            if (isNaN(t) || isNaN(b)) {
+
+                return "Invalid input... Please enter numerical values only."
+
+            }
+
+            var result = Math.floor((Math.random() * (t - b) + b));
+            return result; 
+            
+        }
+
+        function handleClick() {
+            var topValue = parseFloat(document.getElementById("top").value);
+            var bottomValue = parseFloat(document.getElementById("bottom").value);
+            
+            var result = randomNumber(topValue, bottomValue);
+
+            var outputElement = document.getElementById("output");
+            outputElement.textContent = "Number: " + result.toFixed(2);
+        }
+    </script>
+</head>
+<body>
+    <div class="header">
+        <h>Random Number Generator</h>
+    </div>
+    <div class="panel-L"></div>
+    <div class="center">
+        <div class="text">
+            <input type="text" id="bottom" name="Lower" placeholder="Bottom" required>
+            <input type="text" id="top" name="Upper" placeholder="Top" required>
+        </div>
+        <button class="btn" onclick="handleClick()">Generate</button>
+        <p id="output"></p>
+    </div>
+    <div class="panel-R"></div>
+    <div class="footer"></div>
+</body>
+</html>
